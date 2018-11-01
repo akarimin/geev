@@ -10,8 +10,8 @@ specification. Geev is a simple library you can add to your application and use 
 other nodes and their roles. To understand the protocol see [RBND-specification](RBND-Specification.md)
 
 ## The Name
-Geev is a mythical hero of the Iranian historical and mythical epic book, Shahnaame. Who went abroad
-and searched several years to find Kay-khosrow the king of the Iran. He finally found the king and
+Geev is a mythical hero of the Iranian historical and mythical epic book, Shahnaame, who went abroad
+and searched to find Kay-Khosrow, the king of Iran, for several years. He finally found the king and
 brought him and his mother back to Iran.
 
 ## Usage
@@ -31,17 +31,17 @@ Geev geev = new Geev(new GeevConfig.Builder()
             .setMySelf(new Node("YourNodeRole",yourInetAddress,yourPort))
             .build()
 ```
-It start a background thread to do discovery.
+It envokes a background thread to start discovery.
 
 ## Spring-boot starter
-A Spring-boot-starter has been particularly designed for Geev which could be mounted on 
+A Spring-boot-starter has been particularly designed for Geev so it could be mounted on 
 Spring-boot applications. By adding @EnableGeevContainer class-level annotation on the 
-Configuration class, Geev starts and scans all the beans with @GeevHook annotation. Note 
-that, if a class is marked with @GeevHook, that class would be qualified to be a Spring 
+Configuration class, Geev starts scanning all the beans with @GeevHook annotation. Note 
+that, if a class is marked with @GeevHook, that class would be qualified for being a Spring 
 component bean as well, so there would be no need to add @Component or @Service by doing so.
-Every GeevHook class can contain methods annotated by @NodeJoined or @NodeLeft. These method 
-invoked when a new node joined or a existing node left.
-To use geev starter add this dependency to your project:
+Every GeevHook class can contain methods annotated by @NodeJoined or @NodeLeft. These methods 
+are invoked when a new node joined or an existing node left.
+To use geev starter add the dependency below to your pom.xml file:
 ```
 <dependency>
         <groupId>com.behsacorp</groupId>
@@ -62,7 +62,7 @@ geev.myself-port #port of the node
 They are the same as GeevConfig fields.
 
 ## Build
-You need jdk >= 1.8 and maven to build geev. simply use maven to build and install the artifact 
+You need jdk >= 1.8 and maven to build geev. Simply use maven to build and install the artifact 
 into your local repository by the command:
 ```
 mvn install
@@ -77,9 +77,9 @@ Then you can add geev into your project POM file like this:
 ```
 
 ## Contribution
-Any contributions are welcomed. Also if you find any problem using geev you can create issue in 
-github issue tracker of the project. There is just one limitation for the contribution and it's 
-respect the code style located in code-style.xml
+Any contributions are welcomed. Also if you find any problem using geev you can create an issue on 
+github issue tracker of the project. There is only one limitation for contribution: respect the 
+code style located in code-style.xml.
 
 ## License
 Copyright (c) 2018 Behsa Corporation.
